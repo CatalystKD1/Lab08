@@ -22,8 +22,8 @@ def getStr(message):
 
 def addStudent(studentClass, studentAvr):
   temp = []
-  studentName = getStr("What is the students name?")
-  studentGrade = getInt("What is the students grades?")
+  studentName = getStr("What is the students name? ")
+  studentGrade = getInt("What is the students grades? ")
   studentAvr.append(studentGrade)
   temp.append(studentName)
   temp.append(studentGrade)
@@ -34,11 +34,11 @@ def removeStudent(studentClass, studentAvr):
   while True:
     #I had a plan for this. Not using it anymore
     temp = []
-    answer = getStr("Would you like to see the sutdents? Y or N.")
+    answer = getStr("Would you like to see the sutdents? Y or N. ")
     if(answer == "y"):
       print(studentClass)
-    studentName = getStr("What is the students name?")
-    studentGrade = getInt("What is the students grades?")
+    studentName = getStr("What is the students name? ")
+    studentGrade = getInt("What is the students grades? ")
     temp.append(studentName)
     temp.append(studentGrade)
     if temp in studentClass:
