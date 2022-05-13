@@ -56,6 +56,11 @@ def classAvr(studentAvr):
     x += studentAvr[i]
   avr = x / len(studentAvr)
   print(f"This classes student averag is {avr}.")
+
+def highest():
+  print("The student with the highest grade is:")
+  studentClass.sort(key=lambda l:l[1], reverse=True)
+  print(studentClass[0])
   
 def menu(studentClass, studentAvr):
   answer = "a"
@@ -63,26 +68,31 @@ def menu(studentClass, studentAvr):
     print("Add student = 'add'.")
     print("Remove student = 'remove'.")
     print("Average of students = 'avr'.")
+    print("Highest grade = 'highest'")
     print("Quit = 'quit'.")
     answer = getStr("")
     if answer == "add":
+      os.system('cls' if os.name == 'nt' else 'clear')
       addStudent(studentClass, studentAvr)
-      continue
     elif (answer == "remove"):
+      os.system('cls' if os.name == 'nt' else 'clear')
       if(len(studentClass) == 0):
         print("There are no students to remove")
       else:
         removeStudent(studentClass, studentAvr)
     elif (answer == "avr"):
-      print("yo")
+      os.system('cls' if os.name == 'nt' else 'clear')
       classAvr(studentAvr)
+    elif (answer == "highest"):
+      os.system('cls' if os.name == 'nt' else 'clear')
+      highest()
     elif(answer == "quit"):
       print("Have a nice day.")
       break
     else:
       os.system('cls' if os.name == 'nt' else 'clear')
       print("That is no the correct command. Try again.")
-      print("")
+    print("")
     print(studentClass)
       
 
